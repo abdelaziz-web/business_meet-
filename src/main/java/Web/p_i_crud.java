@@ -98,14 +98,18 @@ public class p_i_crud extends HttpServlet implements Servlet {
 				
 		p_i.update(new P_i( id ,nom,  prenom,  email,  m_p,  photo))  ;
 		
+		request.setAttribute("message", "Your profil has been changed");
+		
+		this.getServletContext().getRequestDispatcher("/profil_.jsp").forward( request, response );
+		
 			
 	}else if(request.getParameter("type").equals("Ajouter")) {
 	
 	if(p_i.findbyemail(email)) {
 		
-	request.setAttribute("message", "cet email déja existe");
+	request.setAttribute("message", "this email already exists");
 	
-	this.getServletContext().getRequestDispatcher("/form_p_i.jsp").forward( request, response );
+	this.getServletContext().getRequestDispatcher("/form_p_i_.jsp").forward( request, response );
 	
 	}else {
 		
@@ -113,12 +117,12 @@ public class p_i_crud extends HttpServlet implements Servlet {
 	}	
 	}
 	
-	request.setAttribute("p_i", p_i.getall());
-	
-	this.getServletContext().getRequestDispatcher("/tab_p_i.jsp").forward( request, response );
 	
 	
+    request.setAttribute("message", "Your account have been created");
 	
+	this.getServletContext().getRequestDispatcher("/form_p_i_.jsp").forward( request, response );	
+
 	}
 
 	/**

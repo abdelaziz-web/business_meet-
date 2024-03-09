@@ -2,7 +2,7 @@ package Web.Beans;
 
 public class projets {
 
-
+private int  fk_p_i ;
 private int    id_ide  ;
 private String titre ;
 private String description;
@@ -19,6 +19,24 @@ public projets(int id_ide, String titre, String description, String porteur, Str
 	this.categorie = categorie;
 	this.b_p = b_p;
 }
+
+
+public projets(int fk_p_i, int id_ide, String titre, String description, String porteur, String categorie, String b_p) {
+	this.setFk_p_i(fk_p_i) ;
+	this.id_ide = id_ide ;
+	this.titre = titre;
+	this.description = description;
+	this.porteur = porteur;
+	this.categorie = categorie;
+	this.b_p = b_p;
+}
+
+
+
+
+
+
+
 
 public projets() {
 
@@ -63,6 +81,16 @@ public String getCategorie() {
 
 public void setCategorie(String categorie) {
 	this.categorie = categorie;
+}
+
+
+public int getFk_p_i() {
+	return fk_p_i;
+}
+
+
+public void setFk_p_i(int fk_p_i) {
+	this.fk_p_i = fk_p_i;
 }
 
 

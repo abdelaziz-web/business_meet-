@@ -1,22 +1,20 @@
-
-
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg bg-info">
+  <div class="container-fluid nav-wrapper  ">
+    <a class="navbar-brand brand-logo" href="#">Bridge</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Les demandes </a>
+          <a class="nav-link active" aria-current="page" href="acceuil.jsp">requests </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="projet">Les projets </a>
+          <a class="nav-link" href="projet">the projects </a>
         </li>
+ 
         <li class="nav-item">
         <%
-    // Récupération de la session
         HttpSession alpha = request.getSession();
         %>
         <%  
@@ -35,12 +33,12 @@
         
     <%  if (alpha.getAttribute("inv") == null)  {   %>
         <li class="nav-item">
-          <a class="nav-link" href="servlet_ide"  >Ajouetr un projet</a>
+          <a class="nav-link" href="servlet_ide"  >Add a project</a>
         </li>
       <% }  %>  
         
         <li class="nav-item">
-          <a class="nav-link" href="de" id="deco"  data-param2="deconnecte">Déconnecter</a>
+          <a class="nav-link" href="de" id="deco"  data-param2="deconnecte">Disconnect</a>
         </li>
       </ul>
     </div>

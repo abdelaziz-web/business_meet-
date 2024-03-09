@@ -9,6 +9,7 @@
 </head>
 <body>
 
+p_i
 
 <form method ="post" action="auth_p_i">
   <div class="form-group row">

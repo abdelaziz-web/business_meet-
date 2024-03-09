@@ -56,7 +56,8 @@ public class servlet extends HttpServlet {
 		    request.setAttribute("inv", inv_2);
 		    
 		   
-		    this.getServletContext().getRequestDispatcher("/update.jsp").forward( request, response );
+		    
+		    this.getServletContext().getRequestDispatcher("/profil_.jsp").forward( request, response );
 
 		 }else {
 			 
@@ -105,13 +106,15 @@ public class servlet extends HttpServlet {
 		
 		request.setAttribute("invs", inv.getall());
 		
-		this.getServletContext().getRequestDispatcher("/tab_inv.jsp").forward( request, response );
+		request.setAttribute("message", "Your account have been created");	
+		
+	    this.getServletContext().getRequestDispatcher("/inv_space.jsp").forward( request, response );
 		
 		}else {
 			
-		request.setAttribute("message", "e_mail déja utilusé");	
+		request.setAttribute("message", "this email is already exist");	
 			
-	    this.getServletContext().getRequestDispatcher("/form_inv.jsp").forward( request, response );	
+	    this.getServletContext().getRequestDispatcher("/inv_space.jsp").forward( request, response );	
 			
 		}
 		

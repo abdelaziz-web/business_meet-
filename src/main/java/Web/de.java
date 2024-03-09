@@ -36,7 +36,7 @@ public class de extends HttpServlet {
         }
 
         // Rediriger vers la page de connexion ou une autre page après la déconnexion
-        response.sendRedirect(request.getContextPath() + "/auth_form.jsp");
+        response.sendRedirect(request.getContextPath() + "/form_p_i_.jsp");
 		
 		
 	}

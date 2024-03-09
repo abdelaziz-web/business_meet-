@@ -46,20 +46,9 @@ public class com_servlet extends HttpServlet {
          
          request.setAttribute("id_ide", id_ide) ;
 
-		 request.getRequestDispatcher("/comment.jsp").forward(request, response);
+		 request.getRequestDispatcher("/coment_.jsp").forward(request, response);
 		 
-		// PrintWriter out = response.getWriter();
-
-		// for (comment commentaire : maListe) {
-		//    out.println("<p>" + commentaire.getId_ide() + "</p>");
-		//	}
-
-		//	out.println("</body>");
-		//	out.println("</html>");
-
-			// N'oubliez pas de fermer le PrintWriter
-	    //		out.close();
-		 
+		
 		 
 	}
 

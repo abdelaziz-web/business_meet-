@@ -65,6 +65,7 @@ public class projet extends HttpServlet {
 		for (int i = 0; i < les_ides.size(); i++) {
 			path = les_ides.get(i).getBusiness_plan1() ;
 			listeProjets.add(new projets  (
+					les_ides.get(i).getFK_porteur_ide(),
 					les_ides.get(i).getId(),
 					les_ides.get(i).getTitre(),
 					les_ides.get(i).getDescription(),
@@ -83,7 +84,7 @@ public class projet extends HttpServlet {
 	 	request.setAttribute("listeProjets", listeProjets);
 	 	request.setAttribute("les_cat", les_cat) ;
 		request.setAttribute("les_idees", les_ides) ;
-		this.getServletContext().getRequestDispatcher("/lesprojets.jsp").forward( request, response );
+		this.getServletContext().getRequestDispatcher("/lesprojets_.jsp").forward( request, response );
 		 			
 	}
 

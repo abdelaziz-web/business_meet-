@@ -114,4 +114,14 @@
     <servlet-name>com_servlet</servlet-name>
     <url-pattern>/com_servlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>notification</display-name>
+    <servlet-name>notification</servlet-name>
+    <servlet-class>Web.notification</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>notification</servlet-name>
+    <url-pattern>/notification</url-pattern>
+  </servlet-mapping>
 </web-app>

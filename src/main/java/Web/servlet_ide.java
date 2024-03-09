@@ -44,7 +44,7 @@ public class servlet_ide extends HttpServlet {
 		 
          request.setAttribute("cate", listcat) ;
 	     	
-		 this.getServletContext().getRequestDispatcher("/form_ide.jsp").forward( request, response );		
+		 this.getServletContext().getRequestDispatcher("/form_ide_.jsp").forward( request, response );		
 		
 	}
 
@@ -72,9 +72,9 @@ public class servlet_ide extends HttpServlet {
         
         ecrire_fichier(filePart,fileName,CHEMIN_FICHIER) ;
         
-        request.setAttribute("message", "l'élement a bien éte enregisterer") ;
+        request.setAttribute("message", "Your form has been submitted successfully.") ;
         
-        this.getServletContext().getRequestDispatcher("/form_ide.jsp").forward( request, response ); 
+        this.getServletContext().getRequestDispatcher("/form_ide_.jsp").forward( request, response ); 
         
    
 

@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%@ include file="boots.jsp" %>
-    <title>Formulaire d'Informations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Vous pouvez inclure ici des liens vers des styles CSS, Bootstrap, etc. -->
 </head>
 <body> 
@@ -55,7 +56,7 @@
   <c:forEach var="cat" items="${cate}">
   <option value="${cat.id}">${cat.designation}</option>
         </c:forEach>
-</select>
+ </select>
 </div>
  
   <button type="submit" class="btn btn-primary">Submit</button>
